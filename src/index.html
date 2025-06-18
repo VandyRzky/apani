@@ -6,12 +6,21 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body class="bg-background">
-    <nav class="h-[100px]">
-        
-    </nav>
 
+  <!-- navbar sectipn -->
+    <nav class="py-5 px-[100px] w-full box-border fixed z-10 top-0 flex justify-between items-center bg-background">
+        <img src="../res/contohLogo.png" class="w-[60px]" alt="">
+
+        <ul class="flex justify-between items-center gap-10">
+          <li class="font-poppins text-lg font-medium hover:text-primary"><a href="#">Beranda</a></li>
+          <li class="font-poppins text-lg font-medium hover:text-primary"><a href="#">Kegiatan</a></li>
+          <li class="font-poppins text-lg font-medium hover:text-primary"><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <div class="w-full h-[120px]"></div>
     <!-- hero section -->
-  <section class="lg:px-[75px] xl:px-[100px] flex items-center justify-between box-border">
+  <section class="lg:px-[75px] xl:px-[100px] flex items-center justify-between box-border animate-fade-up ">
     <div class="lg:max-w-md xl:max-w-2xl ">
         <h2 class="font-poppins lg:text-5xl xl:text-6xl lg:font-medium lg:mb-2 text-text-color">Circle Anak Balikpapan Kumpul & Grow Bareng</h2>
 
@@ -43,7 +52,7 @@
 
 
   <!-- sevice section -->
-   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] flex flex-col items-center justify-between gap-12" >
+   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] flex flex-col items-center justify-between gap-12 animate-fade-up" >
     <h2 class="text-5xl font-poppins font-medium text-primary">Kegiatan</h2>
 
     <div class="lg:max-w-full min-w-full flex justify-between">
@@ -111,6 +120,29 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
 
     </div>
    </section>
+
+   <script>
+  const elements = document.querySelectorAll('.animate-fade-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Jalankan ulang animasi
+        entry.target.style.animation = 'none'; // Reset animasi
+        entry.target.offsetHeight; // Trigger reflow
+        entry.target.style.animation = 'fade-up 1s ease-out forwards';
+      } else {
+        // Set kembali ke keadaan semula agar bisa di-animate lagi
+        entry.target.style.opacity = '0';
+        entry.target.style.transform = 'translateY(50px)';
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
 
 
    
