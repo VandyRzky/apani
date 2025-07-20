@@ -19,6 +19,8 @@
     </nav>
     
     <div class="w-full h-[120px]"></div>
+
+
     <!-- hero section -->
   <section class="lg:px-[75px] xl:px-[100px] flex items-center justify-between box-border animate-fade-up ">
     <div class="lg:max-w-md xl:max-w-2xl ">
@@ -43,11 +45,16 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="m15.038 6.343l-1.411 1.418l3.27 3.255l-13.605.013l.002 2l13.568-.013l-3.215 3.23l1.417 1.41l5.644-5.67z"/></svg>
         </button> -->
     </div>
-    <div class="hidden lg:grid grid-cols-2 gap-2 max-w-[408px]">
+
+    <div class="max-w-[400px] min-h-[400px] rounded-xl overflow-hidden">
+      <img class="w-[400px] h-[400px] object-cover" src="../res/contohGambar1.png" alt="">
+    </div>
+
+    <!-- <div class="hidden lg:grid grid-cols-2 gap-2 max-w-[408px]">
         <div class="col-span-2 w-full h-[300px] overflow-hidden flex justify-center items-center flex-col group rounded-xl"><img src="../res/contohGambar1.png" class="scale-200 object-contain group-hover:scale-100 transition-all duration-200" alt=""></div>
         <div class=" lg:w-[200px] lg:h-[200px] overflow-hidden flex justify-center items-center flex-col group rounded-xl"><img src="../res/contohGambar2.png" class="scale-200 object-contain group-hover:scale-100 transition-all duration-200" alt=""></div>
         <div class="lg:w-[200px] lg:h-[200px] overflow-hidden flex justify-center items-center flex-col group rounded-xl"><img src="../res/contohGambar2.png" class="scale-200 object-contain group-hover:scale-100 transition-all duration-200" alt=""></div>
-    </div>
+    </div> -->
   </section>
 
 
@@ -122,10 +129,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
    </section>
 
 
-   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] flex flex-col items-center justify-between gap-12 animate-fade-up">
-    <h2 class="text-5xl font-poppins font-medium text-primary">Galeri</h2>
+   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] flex flex-col items-center justify-between gap-12">
+    <h2 class="text-5xl font-poppins font-medium text-primary animate-fade-up">Galeri</h2>
 
-    <div class="grid grid-cols-6 grid-rows-4 gap-2 w-full">
+    <div class="grid grid-cols-6 grid-rows-4 gap-2 w-full animate-fade-up">
       <div class="row-start-1 min-h-[200px] max-h-[250px] rounded-lg overflow-hidden row-end-3 col-start-1 col-end-2 bg-red-200"><img class="w-full h-full object-cover" src="../res/contohGambar1.png" alt=""></div>
       <div class="row-start-1 min-h-[200px] max-h-[250px] rounded-lg overflow-hidden row-end-3 col-start-2 col-end-5 bg-green-200"><img class="w-full h-full object-cover" src="../res/contohGambar1.png" alt=""></div>
       <div class="row-start-1 min-h-[200px] max-h-[250px] rounded-lg overflow-hidden row-end-3 col-start-5 col-end-7 bg-blue-200"><img class="w-full h-full object-cover" src="../res/contohGambar1.png" alt=""></div>
@@ -139,10 +146,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
 
    <!-- Footer -->
 
-   <footer class="lg:px-[75px] xl:px-[100px] w-full box-border flex justify-between bg-[#121c32] text-white py-10 animate-fade-up">
+   <footer class="lg:px-[75px] xl:px-[100px] w-full box-border flex justify-between bg-[#111827] text-white py-10 animate-fade-up">
     <div class="flex flex-col gap-6 xl:max-w-[300px]">
       <img src="../res/Logo.png" class="w-[200px]" alt="">
-      <p class="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, ipsa.</p>
+      <p class="text-gray-400">Let's Make Good Vibes & Impact Together</p>
       <div class="flex gap-4">
         <a href="#">
           <div class="p-2 rounded-full w-fit bg-white">
@@ -169,28 +176,38 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
 
    </footer>
 
-   <script>
-  const elements = document.querySelectorAll('.animate-fade-up');
+   <!-- <script>
+let lastScrollY = window.scrollY; // Posisi scroll sebelumnya
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Jalankan ulang animasi
-        entry.target.style.animation = 'none'; // Reset animasi
+const elements = document.querySelectorAll('.animate-fade-up');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const currentScrollY = window.scrollY;
+    const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+
+    if (entry.isIntersecting) {
+      if (scrollDirection === 'down') {
+        // Jalankan animasi hanya saat scroll ke bawah
+        entry.target.style.animation = 'none';
         entry.target.offsetHeight; // Trigger reflow
-        entry.target.style.animation = 'fade-up 1s ease-out forwards';
-      } else {
-        // Set kembali ke keadaan semula agar bisa di-animate lagi
-        entry.target.style.opacity = '0';
-        entry.target.style.transform = 'translateY(50px)';
+        entry.target.style.animation = 'fade-up 1.5s ease-out forwards';
       }
-    });
-  }, {
-    threshold: 0.1
-  });
+    } else {
+      // Reset elemen ke keadaan awal
+      entry.target.style.opacity = '0';
+      entry.target.style.transform = 'translateY(50px)';
+    }
 
-  elements.forEach(el => observer.observe(el));
-</script>
+    lastScrollY = currentScrollY; // Simpan posisi scroll saat ini
+  });
+}, {
+  threshold: 0.1
+});
+
+elements.forEach(el => observer.observe(el));
+
+</script> -->
 
 
    
