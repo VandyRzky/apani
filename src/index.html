@@ -8,30 +8,29 @@
 <body class="bg-background">
 
   <!-- navbar sectipn -->
-    <nav class="py-5 lg:px-[75px] xl:px-[100px] w-full box-border fixed z-10 top-0 flex justify-between items-center bg-background">
+    <nav class="py-5 px-[20px] lg:px-[75px] xl:px-[100px] w-full box-border fixed z-10 top-0 flex justify-items-start lg:justify-between lg:items-center bg-background">
         <img src="../res/Logo.png" class="w-[100px]" alt="">
 
-        <ul class="flex justify-between items-center gap-10">
+        <ul class="hidden lg:flex justify-between items-center gap-10">
           <li class="font-poppins text-lg font-medium hover:text-primary"><a href="#">Beranda</a></li>
           <li class="font-poppins text-lg font-medium hover:text-primary"><a href="#">Kegiatan</a></li>
           <li class="font-poppins text-lg font-medium hover:text-primary"><a href="#">Galeri</a></li>
         </ul>
     </nav>
     
-    <div class="w-full h-[120px]"></div>
+    <div class="w-full h-[70px] lg:h-[120px]"></div>
 
 
     <!-- hero section -->
-  <section class="lg:px-[75px] xl:px-[100px] flex items-center justify-between box-border animate-fade-up ">
+  <section class="hidden mt-[60px] lg:flex lg:px-[75px] xl:px-[100px]  items-center justify-between box-border animate-fade-up ">
     <div class="lg:max-w-md xl:max-w-2xl ">
-        <h2 class="font-poppins lg:text-5xl xl:text-6xl lg:font-medium lg:mb-2 text-text-color">Circle Anak Balikpapan Kumpul & Grow Bareng</h2>
+        <h2 class="font-poppins lg:text-5xl xl:text-6xl lg:font-medium lg:mb-2 text-text-color">Circle Anak Balikpapan <span class="text-primary">Kumpul & Grow</span> Bareng</h2>
 
-        <p class="text-text-color-800 text-[16px] font-inter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad obcaecati dolorum iusto ullam consequuntur ut omnis sint voluptate, non nam.
-        </p>
+        <p class="text-text-color-800 text-[18px] font-inter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad obcaecati dolorum iusto ullam consequuntur ut omnis sint voluptate, non nam.</p>
         
         <a href="#"
         class="group relative inline-flex items-center gap-2.5 text-primary transition-all font-medium">
-        <span class="font-poppins text-lg">Join Fokaris</span>
+        <span class="font-poppins text-lg">Gabung Fokaris</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
           <path fill="currentColor"
                 d="m15.038 6.343l-1.411 1.418l3.27 3.255l-13.605.013l.002 2l13.568-.013l-3.215 3.23l1.417 1.41l5.644-5.67z" />
@@ -57,21 +56,45 @@
     </div> -->
   </section>
 
+  <!-- Mobile Hero -->
+  <section class="lg:hidden mb-10">
+    <img class="w-full aspect-square" src="../res/contohGambar1.png" alt="">
+    <div class="box-border px-3.5 py-4 flex flex-col gap-5">
+      
+      
+      <h2 class="font-poppins text-3xl font-[520] text-text-color">Circle Anak Balikpapan <span class="text-primary">Kumpul & Grow</span> Bareng</h2>
+      
+      
+      <p class="font-inter text-[16px] text-text-color-800">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad obcaecati dolorum iusto ullam consequuntur ut omnis sint voluptate, non nam.</p>
+      
+      
+      <a href="#"
+        class="relative inline-flex items-center gap-2.5 text-primary font-medium">
+        <span class="font-poppins">Gabung Fokaris</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <path fill="currentColor"
+                d="m15.038 6.343l-1.411 1.418l3.27 3.255l-13.605.013l.002 2l13.568-.013l-3.215 3.23l1.417 1.41l5.644-5.67z" />
+        </svg>
+      </a>
+
+    </div>
+  </section>
+
 
   <!-- sevice section -->
-   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] flex flex-col items-center justify-between gap-12" >
-    <h2 class="text-5xl font-poppins font-medium text-primary animate-fade-up">Kegiatan</h2>
+   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] mb-[35px] flex flex-col items-center justify-between lg:gap-12 gap-9" >
+    <h2 class="text-3xl lg:text-5xl font-poppins font-medium text-primary animate-fade-up">Kegiatan</h2>
 
-    <div class="lg:max-w-full min-w-full flex justify-between animate-fade-up">
+    <div class="lg:max-w-full min-w-full flex flex-col md:flex-row animate-fade-up">
 
       <!-- menu 1 -->
 
       <div class="lg:max-w-[300px] xl:max-w-[400px] box-border rounded-xl overflow-hidden bg-white drop-shadow-md m-3.5 group lg:hover:scale-110 transition-all duration-300">
     <div class="w-full max-h-[200px] overflow-hidden">
-      <img class="scale-125 object-cover group-hover:scale-105 transition-all duration-300" src="../res/contohGambar2.png" alt="ini gambar">
+      <img class="scale-125 object-cover lg:group-hover:scale-105 transition-all duration-300" src="../res/contohGambar2.png" alt="ini gambar">
     </div>
-    <div class="lg:p-2 flex flex-col gap-2">
-      <h3 class="font-poppins text-2xl text-text-color">
+    <div class="p-2 flex flex-col gap-2">
+      <h3 class="font-poppins text-xl lg:text-2xl text-text-color">
 Mabaratan
         </h3>
         <p class="font-inter text-[16px] text-text-color-800">
@@ -97,10 +120,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
 
 <div class="lg:max-w-[300px] xl:max-w-[400px] box-border rounded-xl overflow-hidden bg-white drop-shadow-md m-3.5 group lg:hover:scale-110 transition-all duration-300">
     <div class="w-full max-h-[200px] overflow-hidden">
-      <img class="scale-125 object-cover group-hover:scale-105 transition-all duration-300" src="../res/contohGambar2.png" alt="ini gambar">
+      <img class="scale-125 object-cover lg:group-hover:scale-105 transition-all duration-300" src="../res/contohGambar2.png" alt="ini gambar">
     </div>
-    <div class="lg:p-2 flex flex-col gap-2">
-      <h3 class="font-poppins text-2xl text-text-color">
+    <div class="p-2 flex flex-col gap-2">
+      <h3 class="font-poppins text-xl lg:text-2xl text-text-color">
 Mabaratan
         </h3>
         <p class="font-inter text-[16px] text-text-color-800">
@@ -113,10 +136,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
 
 <div class="lg:max-w-[300px] xl:max-w-[400px] box-border rounded-xl overflow-hidden bg-white drop-shadow-md m-3.5 group lg:hover:scale-110 transition-all duration-300">
     <div class="w-full max-h-[200px] overflow-hidden">
-      <img class="scale-125 object-cover group-hover:scale-105 transition-all duration-300" src="../res/contohGambar2.png" alt="ini gambar">
+      <img class="scale-125 object-cover lg:group-hover:scale-105 transition-all duration-300" src="../res/contohGambar2.png" alt="ini gambar">
     </div>
-    <div class="lg:p-2 flex flex-col gap-2">
-      <h3 class="font-poppins text-2xl text-text-color">
+    <div class="p-2 flex flex-col gap-2">
+      <h3 class="font-poppins text-xl lg:text-2xl text-text-color">
 Mabaratan
         </h3>
         <p class="font-inter text-[16px] text-text-color-800">
@@ -129,10 +152,10 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
    </section>
 
 
-   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] flex flex-col items-center justify-between gap-12">
-    <h2 class="text-5xl font-poppins font-medium text-primary animate-fade-up">Galeri</h2>
+   <section class="lg:px-[75px] xl:px-[100px] lg:mt-[125px] lg:mb-[125px] mb-[50px] flex flex-col items-center justify-between gap-12">
+    <h2 class="text-3xl lg:text-5xl font-poppins font-medium text-primary animate-fade-up">Galeri</h2>
 
-    <div class="grid grid-cols-6 grid-rows-4 gap-2 w-full animate-fade-up">
+    <div class="hidden lg:grid grid-cols-6 grid-rows-4 gap-2 w-full animate-fade-up">
       <div class="row-start-1 min-h-[200px] max-h-[250px] rounded-lg overflow-hidden row-end-3 col-start-1 col-end-2 bg-red-200"><img class="w-full h-full object-cover" src="../res/contohGambar1.png" alt=""></div>
       <div class="row-start-1 min-h-[200px] max-h-[250px] rounded-lg overflow-hidden row-end-3 col-start-2 col-end-5 bg-green-200"><img class="w-full h-full object-cover" src="../res/contohGambar1.png" alt=""></div>
       <div class="row-start-1 min-h-[200px] max-h-[250px] rounded-lg overflow-hidden row-end-3 col-start-5 col-end-7 bg-blue-200"><img class="w-full h-full object-cover" src="../res/contohGambar1.png" alt=""></div>
@@ -141,13 +164,35 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
       <div class="row-start-3 min-h-[200px] max-h-[250px] rounded-lg overflow-hidden row-end-5 col-start-6 col-end-7 bg-pink-200"><img class="w-full h-full object-cover" src="../res/contohGambar1.png" alt=""></div>
     </div>
 
+    <div class="px-3.5 grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-2 w-full h-fit lg:hidden">
+      <div class="col-start-1 row-start-1 aspect-square overflow-hidden rounded-md">
+        <img src="../res/contohGambar1.png" alt="Gambar 1" class="w-full h-full object-cover" />
+      </div>
+      <div class="col-start-2 row-start-1 aspect-square overflow-hidden rounded-md">
+        <img src="../res/contohGambar2.png" alt="Gambar 2" class="w-full h-full object-cover" />
+      </div>
+      <div class="hidden md:block col-start-3 row-start-1 aspect-square overflow-hidden rounded-md">
+        <img src="../res/contohGambar2.png" alt="Gambar 2" class="w-full h-full object-cover" />
+      </div>
+      <div class="col-start-1 row-start-2 aspect-square overflow-hidden rounded-md">
+        <img src="../res/contohGambar2.png" alt="Gambar 3" class="w-full h-full object-cover" />
+      </div>
+      <div class="col-start-2 row-start-2 aspect-square overflow-hidden rounded-md">
+        <img src="../res/contohGambar2.png" alt="Gambar 4" class="w-full h-full object-cover" />
+      </div>
+      <div class="hidden md:block col-start-3 row-start-2 aspect-square overflow-hidden rounded-md">
+        <img src="../res/contohGambar2.png" alt="Gambar 4" class="w-full h-full object-cover" />
+      </div>
+    </div>
+
+
    </section>
 
 
    <!-- Footer -->
 
-   <footer class="lg:px-[75px] xl:px-[100px] w-full box-border flex justify-between bg-[#111827] text-white py-10 animate-fade-up">
-    <div class="flex flex-col gap-6 xl:max-w-[300px]">
+   <footer class="pt-6 px-3.5 lg:px-[75px] xl:px-[100px] w-full box-border flex flex-col lg:flex-row lg:justify-between bg-[#111827] text-white lg:py-10 animate-fade-up">
+    <div class="flex flex-col gap-2 lg:gap-6 xl:max-w-[300px]">
       <img src="../res/Logo.png" class="w-[200px]" alt="">
       <p class="text-gray-400">Let's Make Good Vibes & Impact Together</p>
       <div class="flex gap-4">
@@ -164,13 +209,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, eligendi.
       </div>
       
     </div>
-    <div class="xl:min-w-[200px]">
-      <h3 class="font-poppins text-3xl mb-5 ">Navigasi</h3>
-      <ul class="flex flex-col gap-5">
-        <li class="font-poppins text-2xl font-medium text-gray-400"><a href="#">Beranda</a></li>
-        <li class="font-poppins text-2xl font-medium text-gray-400"><a href="#">Kegiatan</a></li>
-        <li class="font-poppins text-2xl font-medium text-gray-400"><a href="#">Galeri</a></li>
-        <li class="font-poppins text-2xl font-medium text-gray-400"><a href="#">Join Fokaris</a></li>
+    <div class="xl:min-w-[200px] mt-6 lg:mt-0">
+      <h3 class="font-poppins text-xl mb-1.5 hidden lg:block">Navigasi</h3>
+      <ul class="flex lg:flex-col lg:gap-5 justify-between">
+        <li class="font-poppins text-lg font-medium text-gray-400"><a href="#">Beranda</a></li>
+        <li class="font-poppins text-lg font-medium text-gray-400"><a href="#">Kegiatan</a></li>
+        <li class="font-poppins text-lg font-medium text-gray-400"><a href="#">Galeri</a></li>
+        <li class="font-poppins text-lg font-medium text-gray-400"><a href="#">Join Fokaris</a></li>
       </ul>
     </div>
 
